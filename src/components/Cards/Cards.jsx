@@ -5,6 +5,7 @@ import styles from "./Cards.module.css";
 import { EndGameModal } from "../../components/EndGameModal/EndGameModal";
 import { Button } from "../../components/Button/Button";
 import { Card } from "../../components/Card/Card";
+import { useCheckbox } from "../../hooks/useCheckbox";
 
 // Игра закончилась
 const STATUS_LOST = "STATUS_LOST";
@@ -51,6 +52,9 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
   // Дата конца игры
   const [gameEndDate, setGameEndDate] = useState(null);
 
+  const { isEasyMode } = useCheckbox();
+  let [lives, setLives] = useState(isEasyMode ? 3 : 1);
+
   // Стейт для таймера, высчитывается в setInteval на основе gameStartDate и gameEndDate
   const [timer, setTimer] = useState({
     seconds: 0,
@@ -73,6 +77,7 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
     setGameEndDate(null);
     setTimer(getTimerValue(null, null));
     setStatus(STATUS_PREVIEW);
+    setLives(isEasyMode ? 3 : 1);
   }
 
   /**
@@ -127,7 +132,14 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
 
     // "Игрок проиграл", т.к на поле есть две открытые карты без пары
     if (playerLost) {
-      finishGame(STATUS_LOST);
+      setLives(lives - 1);
+      setTimeout(() => {
+        setCards(cards.map(card => (openCardsWithoutPair.includes(card) ? { ...card, open: false } : card)));
+      }, 300);
+      if (lives === 1) {
+        finishGame(STATUS_LOST);
+        return;
+      }
       return;
     }
 
@@ -150,7 +162,7 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
     }
 
     setCards(() => {
-      return shuffle(generateDeck(pairsCount, 10));
+      return shuffle(generateDeck(pairsCount));
     });
 
     const timerId = setTimeout(() => {
@@ -195,6 +207,9 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
             </>
           )}
         </div>
+        {isEasyMode === true && status === STATUS_IN_PROGRESS ? (
+          <p className={styles.timerDescription}>Осталось жизней: {lives} </p>
+        ) : null}
         {status === STATUS_IN_PROGRESS ? <Button onClick={resetGame}>Начать заново</Button> : null}
       </div>
 

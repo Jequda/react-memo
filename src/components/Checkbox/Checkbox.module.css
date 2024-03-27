@@ -1,0 +1,61 @@
+/* .input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.input + label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-family: StratosSkyeng;
+  font-size: 20px;
+}
+
+.input + label::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2732 12.0123C10.2732 12.0123 18.4621 0.226727 18.6066 0L21.9999 2.23958L12.3598 16.3008C12.2153 16.5276 12.0283 16.7232 11.8095 16.8765C11.5906 17.0297 11.3442 17.1376 11.0844 17.1939C10.8245 17.2502 10.5563 17.2539 10.2951 17.2047C10.0338 17.1555 9.78469 17.0544 9.56187 16.9071C9.46546 16.8433 9.25713 16.6609 9.25713 16.6609L0 7.73959L2.74606 4.71805L10.2732 12.0123Z' fill='%237AC100'/%3E%3C/svg%3E%0A");
+} */
+
+.input {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+}
+.input + label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-family: StratosSkyeng;
+  font-size: 20px;
+}
+.input + label::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+  border-radius: 55px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  border-color: #fff;
+  background-color: #fff;
+}
+.input:checked + label::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3c!-- icon666.com - MILLIONS vector ICONS FREE --%3e%3csvg clip-rule='evenodd' fill-rule='evenodd' image-rendering='optimizeQuality' shape-rendering='geometricPrecision' text-rendering='geometricPrecision' viewBox='0 0 2667 2667' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='Layer_x0020_1'%3e%3ccircle cx='1333' cy='1333' fill='%237ed63f' r='1333' style='fill: rgb(0, 116, 189);'%3e%3c/circle%3e%3cpath d='m1038 1203 121 210 436-435 3-3c22-21 51-32 80-32 30 0 61 12 84 35 1 0 1 1 2 2 21 23 32 52 32 81 0 30-11 60-34 83l-1 1-544 544-1 1c-1 1-1 1-2 2-23 21-52 31-81 31-30 0-60-11-83-34l-1-1c-5-5-9-10-13-17-4-5-7-11-10-17l-192-333c-1-1-2-2-2-4-26-47-16-91 9-124 10-13 23-23 36-31 14-8 29-13 45-15 43-7 88 8 116 56zm-186-351c123-124 293-200 481-200s359 76 482 200c123 123 200 293 200 481s-77 359-200 482-294 200-482 200-358-77-481-200c-124-123-200-294-200-482s76-358 200-481zm1085-122c-155-154-368-250-604-250-235 0-449 96-603 250s-250 368-250 603c0 236 96 449 250 604 154 154 368 250 603 250 236 0 449-96 604-250 154-155 250-368 250-604 0-235-96-449-250-603z' fill='%23fefefe' fill-rule='nonzero'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
+}
