@@ -89,6 +89,7 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
    */
   const openCard = clickedCard => {
     // Если карта уже открыта, то ничего не делаем
+
     if (clickedCard.open) {
       return;
     }
@@ -232,6 +233,7 @@ export function Cards({ pairsCount = 3, previewSeconds = 5 }) {
             gameDurationSeconds={timer.seconds}
             gameDurationMinutes={timer.minutes}
             onClick={resetGame}
+            game={pairsCount}
           />
         </div>
       ) : null}
