@@ -7,6 +7,7 @@ import celebrationImageUrl from "./images/celebration.png";
 import { LeaderboardLink } from "../LeaderboardLink/LeaderboardLink";
 import { postLeader } from "../../api";
 import { useState } from "react";
+import cn from "classnames";
 
 export function EndGameModal({ isWon, gameDurationSeconds, gameDurationMinutes, onClick, game }) {
   const title = isWon ? "Вы победили!" : "Вы проиграли!";
@@ -30,7 +31,7 @@ export function EndGameModal({ isWon, gameDurationSeconds, gameDurationMinutes, 
 
   return (
     <>
-      <div className={styles.modal}>
+      <div className={newLeader === true && isWon === true ? cn(styles.modal, styles.modalWon) : styles.modal}>
         <img className={styles.image} src={imgSrc} alt={imgAlt} />
         {newLeader === true && isWon === true ? (
           <h2 className={styles.newLeaderTitle}>
