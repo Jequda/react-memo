@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./SelectLevelPage.module.css";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import { useCheckbox } from "../../hooks/useCheckbox";
+import { LeaderboardLink } from "../../components/LeaderboardLink/LeaderboardLink";
 
 export function SelectLevelPage() {
   const { setIsEasyMode } = useCheckbox();
@@ -34,6 +35,7 @@ export function SelectLevelPage() {
             setIsEasyMode(prev => !prev);
           }}
         />
+        <LeaderboardLink>Перейти к лидерборду</LeaderboardLink>
       </div>
     </div>
   );
