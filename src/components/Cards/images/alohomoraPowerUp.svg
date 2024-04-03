@@ -1,0 +1,25 @@
+<svg width="68.000000" height="68.000000" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="clip2_2">
+			<rect id="svg" width="47.000000" height="51.000000" transform="translate(10.000000 8.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2_7">
+			<rect id="svg" width="68.000000" height="68.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient id="paint_linear_2_3_0" x1="40.554054" y1="19.401329" x2="29.007549" y2="24.612160" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="1.000000" stop-color="#F0F0F0"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip2_7)">
+		<rect id="rect" rx="34.000000" width="68.000000" height="68.000000" fill="#C2F5FF" fill-opacity="1.000000"/>
+		<g clip-path="url(#clip2_2)">
+			<rect id="rect" x="32.729500" y="9.000000" rx="2.000000" width="24.956600" height="34.761002" transform="rotate(15 32.729500 9.000000)" fill="url(#paint_linear_2_3_0)" fill-opacity="1.000000"/>
+			<rect id="rect" x="32.729500" y="9.000000" rx="2.000000" width="24.956600" height="34.761002" transform="rotate(15 32.729500 9.000000)" stroke="#E4E4E4" stroke-opacity="1.000000" stroke-width="1.000000"/>
+			<path id="path" d="M39.53 33.48C39.41 33.33 39.29 33.17 39.17 33.02C37.54 30.88 35.82 28.64 36.3 26.65C36.89 24.67 38.43 24.37 39.62 24.68C40.31 24.87 41 25.48 41.41 26.3C42.12 25.78 42.95 25.58 43.65 25.76C44.83 26.08 46.13 27.14 45.65 29.16C45.05 31.19 42.38 32.31 39.81 33.39C39.73 33.42 39.61 33.44 39.53 33.48Z" fill="#FF4545" fill-opacity="1.000000" fill-rule="evenodd"/>
+			<rect id="rect" x="10.806641" y="24.625099" rx="2.000000" width="24.956600" height="34.761002" transform="rotate(-15 10.806641 24.625099)" fill="#FFFFFF" fill-opacity="1.000000"/>
+			<rect id="rect" x="10.806641" y="24.625099" rx="2.000000" width="24.956600" height="34.761002" transform="rotate(-15 10.806641 24.625099)" stroke="#E4E4E4" stroke-opacity="1.000000" stroke-width="1.000000"/>
+			<path id="path" d="M26.12 35.49C25.35 34.99 24.45 34.8 23.76 34.99C22.57 35.31 21.39 36.34 21.86 38.36C22.45 40.32 25.05 41.4 27.54 42.43C27.72 42.51 27.9 42.58 28.08 42.66C28.13 42.59 28.22 42.5 28.28 42.43C29.96 40.22 31.71 37.91 31.22 35.85C30.63 33.86 28.97 33.59 27.78 33.91C27.09 34.1 26.47 34.69 26.12 35.49Z" fill="#FF4545" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>
