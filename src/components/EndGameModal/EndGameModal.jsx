@@ -9,7 +9,7 @@ import { postLeader } from "../../api";
 import { useState } from "react";
 import cn from "classnames";
 
-export function EndGameModal({ isWon, gameDurationSeconds, gameDurationMinutes, onClick, game }) {
+export function EndGameModal({ isWon, gameDurationSeconds, gameDurationMinutes, onClick, game, achievements }) {
   const title = isWon ? "Вы победили!" : "Вы проиграли!";
 
   const imgSrc = isWon ? celebrationImageUrl : deadImageUrl;
@@ -22,7 +22,7 @@ export function EndGameModal({ isWon, gameDurationSeconds, gameDurationMinutes, 
   const totalGameDuration = gameDurationMinutes * 60 + gameDurationSeconds;
 
   const handlePostLeader = () => {
-    postLeader({ name: leaderName, time: totalGameDuration })
+    postLeader({ name: leaderName, time: totalGameDuration, achievements: achievements })
       .then()
       .catch(error => {
         console.log(error);
